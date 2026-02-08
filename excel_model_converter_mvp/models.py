@@ -15,11 +15,11 @@ class ExpressionNode(BaseSchema):
     ref: str | None = None
     ref_type: Literal["cell", "name"] | None = None
     operator: str | None = None
-    left: "ExpressionNode" | None = None
-    right: "ExpressionNode" | None = None
-    operand: "ExpressionNode" | None = None
+    left: ExpressionNode | None = None
+    right: ExpressionNode | None = None
+    operand: ExpressionNode | None = None
     name: str | None = None
-    args: list["ExpressionNode"] | None = None
+    args: list[ExpressionNode] | None = None
 
 
 class Factor(BaseSchema):
